@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      margin: 10px;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .gallery img.selected {
+      border-color: blue;
+    }
+
+
+    @media screen and (max-width: 600px) {
+      .gallery img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery">
+    <img src="wallpaper13.jpg" alt="Imagem 1">
+    <img src="imagem2.jpg" alt="Imagem 2">
+    <img src="imagem3.jpg" alt="Imagem 3">
+    <img src="imagem4.jpg" alt="Imagem 4">
+  </div>
+
+  <script>
+    // Seleciona ou deseleciona a imagem quando clicada
+    function toggleImageSelection(event) {
+      const image = event.target;
+      image.classList.toggle('selected');
+    }
+
+    // Adiciona o evento de clique em todas as imagens da galeria
+    const images = document.querySelectorAll('.gallery img');
+    images.forEach(image => {
+      image.addEventListener('click', toggleImageSelection);
+    });
+  </script>
+</body>
+</html>
