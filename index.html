@@ -1,55 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-  <style>
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .gallery img {
-      width: 300px;
-      height: 200px;
-      object-fit: cover;
-      margin: 10px;
-      cursor: pointer;
-      border: 2px solid transparent;
-    }
-
-    .gallery img.selected {
-      border-color: blue;
-    }
-
-
-    @media screen and (max-width: 600px) {
-      .gallery img {
-        width: 100%;
-        height: auto;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <title>Galeria Responsiva</title>
 </head>
 <body>
-  <div class="gallery">
-    <img src="wallpaper13.jpg" alt="Imagem 1">
-    <img src="imagem2.jpg" alt="Imagem 2">
-    <img src="imagem3.jpg" alt="Imagem 3">
-    <img src="imagem4.jpg" alt="Imagem 4">
-  </div>
+     
+    <div class="galeria">
+        <div class="single-galeria wg2 hg2">
+            <div class="img">
+                <img src="images/wallpaper1.jpg" alt="Imagem 1">
+            </div>
 
-  <script>
-    // Seleciona ou deseleciona a imagem quando clicada
-    function toggleImageSelection(event) {
-      const image = event.target;
-      image.classList.toggle('selected');
-    }
+            <div class="overflow">
+                <div class="conteudo">
+                    <h1>Bleach</h1>
+                    <p>17 de junho de 2023 <br> por <b>Ana Maria</b></p>
+                </div>
+            </div>
+        </div>
+        <div class="single-galeria wg2">
+            <div class="img">
+                <img src="images/wallpaper12.jpg" alt="Imagem 2">
+            </div>
 
-    // Adiciona o evento de clique em todas as imagens da galeria
-    const images = document.querySelectorAll('.gallery img');
-    images.forEach(image => {
-      image.addEventListener('click', toggleImageSelection);
-    });
-  </script>
+            <div class="overflow">
+                <div class="conteudo">
+                    <h1>Jujutsu Kaisen</h1>
+                    <p>17 de junho de 2021 <br> por <b>Ana Maria</b></p>
+                </div>
+            </div>
+        </div>
+        <div class="single-galeria">
+            <div class="img">
+                <img src="images/wallpaper13.jpg" alt="Imagem 3">
+            </div>
+
+            <div class="overflow">
+                <div class="conteudo">
+                    <h1>Noragami</h1>
+                    <p>17 de junho de 2023 <br> por <b>Ana Maria</b></p>
+                </div>
+            </div>
+        </div>
+        <div class="single-galeria">
+            <div class="img">
+                <img src="images/wallpaper9.jpg" alt="Imagem 4">
+            </div>
+
+            <div class="overflow">
+                <div class="conteudo">
+                    <h1>Haikyuu</h1>
+                    <p>17 de junho de 2023<br> por <b>Ana Maria</b></p>
+                </div>
+            </div>
+        </div>     
+    </div>
+    
 </body>
 </html>
